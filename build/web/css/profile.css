@@ -1,0 +1,615 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 3, 2025, 5:02:11 PM
+    Author     : LE VAN THUAN
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+/*|| NAV */
+nav {
+    background-color: dodgerblue;
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo a {
+    font-size: 44px;
+    font-family: cursive, 'Courier New', Courier, monospace;
+}
+
+.menu ul,
+.actions ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu ul li a,
+.actions ul li a {
+    font-size: 18px;
+}
+
+.actions ul li:nth-child(1) {
+    position: relative;
+}
+
+.actions ul li:nth-child(1) input {
+    height: 32px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 0 10px;
+}
+
+.actions ul li:nth-child(1) i {
+    position: absolute;
+    font-size: 20px;
+    right: 8px;
+    color: #ccc;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.actions ul li button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.actions ul li a i {
+    font-size: 28px;
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 250px;
+    border: 1px solid #ddd;
+}
+
+.navbar-search input {
+    border: none;
+    outline: none;
+    flex: 1; 
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.navbar-search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-search button img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navbar-search button:hover img {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+input[type="submit"] {
+    background: #1E90FF; 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #187bcd; 
+}
+
+/* || BODY */
+.acc-content {
+    display: flex;
+    gap: 20px;
+    min-height: 60vh;
+}
+
+/* Chỉ thay đổi màu cho nút logout ở left */
+.left ul li form input[type="submit"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    cursor: pointer;
+    transition: none;
+}
+
+.left ul li form input[type="submit"]:hover {
+    background: deepskyblue;
+    color: white;
+}
+
+.hello {
+    font-size: 28px;
+    font-weight: bold;
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 25px; 
+}
+
+
+.left {
+    width: 30%;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left ul li {
+    padding: 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.left ul li:hover {
+    color: white;
+    background-color: deepskyblue;
+}
+.left ul li.active {
+    background: dodgerblue;
+    color: white;
+}
+
+.right {
+    width: 70%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ẩn các phần nội dung mặc định */
+.right .content {
+    display: none;
+}
+
+/* Hiển thị phần nội dung được chọn */
+.right .content.active {
+    display: block;
+}
+
+.right h2 {
+    background: dodgerblue; 
+    color: white;
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+}
+
+.right p {
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    background: #f8f9fa; /* Màu nền nhẹ hơn */
+    border-radius: 6px;
+}
+
+/* || ORDERS */
+#orders table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#orders table th, 
+#orders table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#orders table th {
+    font-weight: bold;
+    background: #f8f9fa;
+}
+
+#orders table td {
+    background: #f8f9fa;
+}
+
+#orders table tr:nth-child(even) td {
+    background: white;
+}
+
+#orders table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Căn chỉnh nội dung */
+#orders {
+    padding: 15px;
+}
+
+#orders h2 {
+    background: dodgerblue;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#orders p {
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.order-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center; 
+}
+
+.receive-btn, .cancel-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.receive-btn {
+    background: #28a745;
+    color: white;
+}
+
+.cancel-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.receive-btn:hover {
+    background: #218838;
+}
+
+.cancel-btn:hover {
+    background: #c82333;
+}
+
+a.view-order-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+a.view-order-btn {
+    background: dodgerblue;
+    color: white;
+}
+
+a.view-order-btn:hover {
+    background: #1e7cd8;
+}
+
+
+/* || PROFILE TABLE */
+#profile table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#profile table th, 
+#profile table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#profile table th {
+    font-weight: bold;
+    width: 150px;
+    text-align: left;
+    padding-right: 15px;
+    background: #f8f9fa;
+    border-right: 2px solid #ddd;
+}
+
+#profile table td {
+    background: #f8f9fa;
+}
+
+#profile table tr:nth-child(even) th,
+#profile table tr:nth-child(even) td {
+    background: white;
+}
+
+#profile table tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+/* || #ADDRESS */
+.address-form {
+    margin: 10px;
+}
+/* Nhóm nhãn và input */
+#address .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#address .form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#address .form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    color: #495057;
+    outline: none; 
+    cursor: default;
+}
+
+#address .form-group input.editable {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    cursor: text;
+}
+
+#address .button-group {
+    display: flex;
+    gap: 10px;
+}
+
+#address button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#address #updateBtn {
+    background: dodgerblue;
+    color: white;
+}
+
+#address #saveBtn {
+    background: #28a745;
+    color: white;
+}
+
+#address #exitBtn {
+    background: #dc3545;
+    color: white;
+}
+
+#address #updateBtn:hover {
+    background: #1e7cd8;
+}
+
+#address #saveBtn:hover {
+    background: #218838;
+}
+
+#address #exitBtn:hover {
+    background: #c82333;
+}
+
+#address .hidden {
+    display: none;
+}
+
+/* || CHANGE PASS */
+#security form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#security .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#security .form-group input {
+    height: 30px;
+}
+
+#security input[type="submit"] {
+    width: 150px; 
+    padding: 8px 12px; 
+    font-size: 14px; 
+    height: 44px;
+}
+
+#security label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* || FOOTER */
+footer {
+    background-color: dodgerblue;
+    color: white;
+    padding-top: 36px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 86%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: lightgray;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    color: white;
+    font-size: 24px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.footer-socials a:hover {
+    background-color: white;
+    color: dodgerblue;
+}
+
+footer > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@media screen and (min-width: 44541px) {
+    .acc-content {
+        min-height: 85vh;
+    }
+}
+
+@media screen and (min-width: 1541px) {
+    .acc-content {
+        min-height: 65vh;
+    }
+}

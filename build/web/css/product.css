@@ -1,0 +1,296 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Feb 23, 2025, 4:09:42 PM
+    Author     : LE VAN THUAN
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+/*|| NAV */
+nav {
+    background-color: #333;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo a {
+    font-size: 40px;
+    font-family: cursive, 'Courier New', Courier, monospace;
+}
+
+.menu ul,
+.actions ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu ul li a,
+.actions ul li a {
+    font-size: 18px;
+}
+
+.actions ul li:nth-child(1) {
+    position: relative;
+}
+
+.actions ul li:nth-child(1) input {
+    height: 32px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 0 10px;
+}
+
+.actions ul li:nth-child(1) i {
+    position: absolute;
+    font-size: 20px;
+    right: 8px;
+    color: #ccc;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.actions ul li button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.actions ul li a i {
+    font-size: 28px;
+}
+
+/* || Navbar Search */
+.navbar-search {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 250px;
+    border: 1px solid #ddd;
+}
+
+.navbar-search input {
+    border: none;
+    outline: none;
+    flex: 1; 
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.navbar-search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-search button img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navbar-search button:hover img {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+input[type="submit"] {
+    background: #333; 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #555; 
+}
+
+/* || Body */
+.product-container {
+    max-width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-container h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.add-product-btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.add-product-btn:hover {
+    background-color: #555;
+}
+
+/* || Category Section */
+.category-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.category-header .category-title-id {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.category-header .category-title {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.no-products-message {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* || Product Item */
+.product-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    min-width: 200px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-item h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px;
+}
+
+.delete-btn, .update-btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.delete-btn {
+    background: #d9534f;
+    color: white;
+}
+
+.update-btn {
+    background: #5bc0de;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c9302c;
+}
+
+.update-btn:hover {
+    background: #31b0d5;
+}
+
+.product-id {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.product-header h2 {
+    font-size: 36px;
+    flex-grow: 1;
+    text-align: left;
+}
