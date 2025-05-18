@@ -340,7 +340,7 @@
         </header>
         <div class="container">
             <div class="body-container">
-                <h2>Order Placed Successfully!</h2>
+                <h2>❤ Order Placed Successfully!</h2>
                 <p>Thank you for your purchase. Your order has been placed successfully.</p>
                 <a href="home">Continue Shopping</a>
             </div>
