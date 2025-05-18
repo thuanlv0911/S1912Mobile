@@ -58,7 +58,7 @@
             <c:set var="a" value="${requestScope.a}"/>
             <div class="container">
                 <div class="hello">
-                    Hello ${requestScope.a.username} ❤️‍🔥
+                    Hello ${requestScope.a.username} ️‍🔥
                 </div>
                 <div class="acc-content">
                     <div class="left">
